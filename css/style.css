@@ -3,17 +3,40 @@
   padding: 0;
   box-sizing: border-box;
   background: rgb(241, 241, 241);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
+nav {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+nav a {
+  text-decoration: none;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  padding: 5px;
+}
 h1 {
+  text-transform: uppercase;
+  font-weight: 400;
   text-align: center;
 }
 
 .search {
+  font-size: 18px;
   margin-left: 50px;
+  border: solid 1px black;
 }
 ul {
   list-style: none;
   margin-left: 50px;
   margin-top: 50px;
+  border: solid 1px black;
+}
+
+ul li {
+  font-size: 20px;
+  margin: 20px;
+  border: solid black 1px;
+  background-color: aqua;
+  font-weight: 3 00;
 }
