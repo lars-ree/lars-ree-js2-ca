@@ -1,6 +1,6 @@
-import { renderArticles } from "./renderProperties.js";
+import { renderData } from "./renderData.js";
 
-export function searchArticle(result) {
+export function searchData(result) {
   const search = document.querySelector(".search");
 
   search.onkeyup = function (event) {
@@ -20,6 +20,6 @@ export function searchArticle(result) {
       }
     });
 
-    renderArticles(filteredProp);
+    renderData(filteredProp);
   };
 }

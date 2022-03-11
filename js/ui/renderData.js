@@ -2,7 +2,7 @@ import { displayMessage } from "../components/displayMessage.js";
 import { getFavourite, savetoFavourites } from "../utils/localStorage.js";
 import messages from "./messages.js";
 
-export function renderArticles(render, isFavourite = false) {
+export function renderData(render, isFavourite = false) {
   const favourites = getFavourite();
 
   if (isFavourite) {
@@ -70,7 +70,7 @@ export function renderArticles(render, isFavourite = false) {
       savetoFavourites(newFavList);
     }
     if (isFavourite) {
-      renderArticles(null, true);
+      renderData(null, true);
     }
   }
 }

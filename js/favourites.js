@@ -1,12 +1,12 @@
-import { renderArticles } from "./ui/renderProperties.js";
+import { renderData } from "./ui/renderData.js";
 import { displayMessage } from "./components/displayMessage.js";
 import message from "./ui/messages.js";
 
-renderArticles(null, true);
+renderData(null, true);
 
-const clearBtn = document.querySelector("button");
+const clearButton = document.querySelector("button");
 
-clearBtn.addEventListener("click", clearStorage);
+clearButton.addEventListener("click", clearStorage);
 
 function clearStorage() {
   const articleContainer = document.querySelector("ul");
