@@ -12,5 +12,5 @@ function clearStorage() {
   const articleContainer = document.querySelector("ul");
 
   localStorage.clear();
-  displayMessage("warning", message.emptyFav, "ul");
+  displayMessage("warning", message.emptyFavourite, "ul");
 }

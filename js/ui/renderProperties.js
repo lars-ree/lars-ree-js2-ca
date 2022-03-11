@@ -1,9 +1,9 @@
 import { displayMessage } from "../components/displayMessage.js";
-import { getFav, savetoFavourites } from "../utils/localStorage.js";
+import { getFavourite, savetoFavourites } from "../utils/localStorage.js";
 import messages from "./messages.js";
 
 export function renderArticles(render, isFavourite = false) {
-  const favourites = getFav();
+  const favourites = getFavourite();
 
   if (isFavourite) {
     render = favourites;
@@ -12,7 +12,7 @@ export function renderArticles(render, isFavourite = false) {
   if (render.length === 0) {
     return displayMessage(
       "warning",
-      isFavourite ? messages.emptyFav : messages.noResult,
+      isFavourite ? messages.emptyFavourite : messages.noResult,
       "ul"
     );
   }
@@ -22,11 +22,11 @@ export function renderArticles(render, isFavourite = false) {
   articleContainer.innerHTML = "";
 
   render.forEach(function (article) {
-    const articleIsInFav = favourites.find(function (item) {
+    const articleInFavourite = favourites.find(function (item) {
       return item.id == article.id;
     });
 
-    const heartClass = articleIsInFav ? "fas" : "far";
+    const heartClass = articleInFavourite ? "fas" : "far";
 
     articleContainer.innerHTML += `
         <div class="card">
@@ -50,7 +50,7 @@ export function renderArticles(render, isFavourite = false) {
 
     const { id, title, summary, author } = this.dataset;
 
-    const favourite = getFav();
+    const favourite = getFavourite();
 
     const articlesIsInFav = favourite.find(function (item) {
       return item.id === id;

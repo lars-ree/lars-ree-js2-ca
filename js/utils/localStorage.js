@@ -1,6 +1,6 @@
 import { favouritesKey } from "../settings/storageKey.js";
 
-export function getFav() {
+export function getFavourite() {
   const favourites = localStorage.getItem(favouritesKey);
 
   if (!favourites) {

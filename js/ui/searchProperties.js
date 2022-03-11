@@ -2,7 +2,6 @@ import { renderArticles } from "./renderProperties.js";
 
 export function searchArticle(result) {
   const search = document.querySelector(".search");
-  const articleContainer = document.querySelector("ul");
 
   search.onkeyup = function (event) {
     console.log(event);

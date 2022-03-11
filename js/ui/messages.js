@@ -1,6 +1,6 @@
 const messages = {
-  noResult: "No article found",
-  emptyFav: "Favourites are empty",
+  noResult: "No articles found",
+  emptyFavourite: "No favourites saved to favourites list",
   serverError: "There was an error fetching the articles",
 };
 
