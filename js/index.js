@@ -4,10 +4,10 @@ import { searchArticle } from "./ui/searchProperties.js";
 import { displayMessage } from "./components/displayMessage.js";
 import messages from "./ui/messages.js";
 
-const articlesUrl = baseUrl + "articles";
+const dataFromApi = baseUrl + "articles";
 (async function () {
   try {
-    const response = await fetch(articlesUrl);
+    const response = await fetch(dataFromApi);
     const json = await response.json();
     console.log(json);
 
